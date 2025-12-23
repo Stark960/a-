@@ -1,0 +1,21 @@
+
+{
+  "name": "guardia-firewall",
+  "version": "1.0.0",
+  "description": "Mobile Firewall App",
+  "main": "index.html",
+  "scripts": {
+    "build": "esbuild index.tsx --bundle --minify --sourcemap --outfile=dist/index.js --loader:.tsx=tsx --loader:.ts=ts --define:process.env.NODE_ENV=\\\"production\\\" && cp index.html dist/ && cp manifest.json dist/ && sed -i 's/\\.\\/index.tsx/index.js/g' dist/index.html"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "lucide-react": "latest",
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
