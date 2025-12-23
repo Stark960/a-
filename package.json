@@ -5,7 +5,8 @@
   "description": "Mobile Firewall App",
   "main": "index.html",
   "scripts": {
-    "build": "esbuild index.tsx --bundle --minify --sourcemap --outfile=dist/index.js --loader:.tsx=tsx --loader:.ts=ts --define:process.env.NODE_ENV=\\\"production\\\" && cp index.html dist/ && cp manifest.json dist/ && sed -i 's/\\.\\/index.tsx/index.js/g' dist/index.html"
+    "build": "esbuild index.tsx --bundle --minify --sourcemap --outfile=dist/index.js --loader:.tsx=tsx --loader:.ts=ts --define:process.env.NODE_ENV=\\\"production\\\" && cp index.html dist/ && cp manifest.json dist/ && sed -i 's/\\.\\/index.tsx/index.js/g' dist/index.html",
+    "check-env": "node -e 'console.log(\"Node version:\", process.version)'"
   },
   "dependencies": {
     "react": "^19.2.3",
