@@ -68,37 +68,27 @@ const Simulator: React.FC<SimulatorProps> = ({ onSimulate }) => {
         )}
       </div>
 
-      {/* 规则逻辑说明 */}
-      <div className="bg-[#44474e]/20 p-4 rounded-xl border border-white/5">
-        <h4 className="text-xs font-bold text-[#c4c6cf] mb-2 uppercase">规则逻辑说明:</h4>
-        <ul className="text-[11px] text-[#c4c6cf] space-y-2 list-disc pl-4">
-          <li><strong>白名单:</strong> 始终允许通行，跳过所有其他过滤器。</li>
-          <li><strong>黑名单:</strong> 立即拦截所有相关信号。</li>
-          <li><strong>内容过滤:</strong> 如果不在上述名单中，短信内容将被扫描关键字。</li>
-        </ul>
-      </div>
-
       {/* APK 构建指南卡片 */}
       <div className="m3-card p-5 border border-[#aac7ff]/20 bg-[#aac7ff]/5">
         <h4 className="text-sm font-bold text-[#aac7ff] mb-3 flex items-center gap-2">
-          📦 如何生成 APK (无需下载 SDK)
+          📦 找不到 Build APK 选项？
         </h4>
         <div className="space-y-3">
           <div className="flex gap-3">
             <div className="w-6 h-6 rounded-full bg-[#aac7ff] text-[#00315c] flex items-center justify-center text-[10px] font-bold shrink-0">1</div>
-            <p className="text-[12px] text-[#e2e2e6]">将此代码上传到您的 <b>GitHub</b> 仓库。</p>
+            <p className="text-[12px] text-[#e2e2e6]">检查仓库根目录是否有 <b>.github/workflows/build-apk.yml</b> 文件。</p>
           </div>
           <div className="flex gap-3">
             <div className="w-6 h-6 rounded-full bg-[#aac7ff] text-[#00315c] flex items-center justify-center text-[10px] font-bold shrink-0">2</div>
-            <p className="text-[12px] text-[#e2e2e6]">点击仓库顶部的 <b>Actions</b> 选项卡。</p>
+            <p className="text-[12px] text-[#e2e2e6]">点击顶部 <b>Actions</b>，在左侧列表中点击 <b>"Build Android APK"</b>。</p>
           </div>
           <div className="flex gap-3">
             <div className="w-6 h-6 rounded-full bg-[#aac7ff] text-[#00315c] flex items-center justify-center text-[10px] font-bold shrink-0">3</div>
-            <p className="text-[12px] text-[#e2e2e6]">选择 <b>Build Android APK</b> 工作流并运行。</p>
+            <p className="text-[12px] text-[#e2e2e6]">点击右侧白色按钮 <b>Run workflow</b> 即可开始构建。</p>
           </div>
           <div className="flex gap-3">
             <div className="w-6 h-6 rounded-full bg-[#aac7ff] text-[#00315c] flex items-center justify-center text-[10px] font-bold shrink-0">4</div>
-            <p className="text-[12px] text-[#e2e2e6]">构建完成后，在 <b>Artifacts</b> 处下载 APK 文件。</p>
+            <p className="text-[12px] text-[#e2e2e6]">完成后在页面最下方的 <b>Artifacts</b> 下载 APK。</p>
           </div>
         </div>
       </div>
